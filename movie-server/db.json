@@ -1,0 +1,118 @@
+{
+  "movies": [
+    {
+      "title": "Herr der Ringe",
+      "subtitle": "Die Gefärten",
+      "cover": "img_1.jpg",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Star Wars Episode I",
+      "subtitle": "Dunkle Bedrohung",
+      "cover": "img_2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Zurück in die Zukunft",
+      "subtitle": "",
+      "cover": "img_3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Stirb Langsam",
+      "subtitle": "Die Hard",
+      "cover": "img_4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Star Treck",
+      "subtitle": " into darkness",
+      "cover": "img_5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Terminator",
+      "cover": "img_6.jpg"
+    },
+    {
+      "title": "Man in Black",
+      "cover": "img_7.jpg",
+      "id": 7
+    },
+    {
+      "title": "Alien",
+      "subtitle": "Das unheimliche Wessen aus dem All",
+      "cover": "img_8.jpg",
+      "id": 8
+    },
+    {
+      "title": "Rambo",
+      "cover": "img_9.jpg",
+      "id": 9
+    },
+    {
+      "title": "Tanz der Teufel",
+      "cover": "img_10.jpg",
+      "id": 10
+    },
+    {
+      "title": "Beverly Hills Cop",
+      "cover": "img_9.jpg",
+      "id": 11
+    },
+    {
+      "title": "Ghostbusters",
+      "cover": "img_10.jpg",
+      "id": 12
+    },
+    {
+      "title": "Tanz der Vampire",
+      "cover": "img_11.jpg",
+      "id": 13
+    },
+    {
+      "title": "Fackeln im Sturm",
+      "cover": "img_13.jpg",
+      "id": 14
+    },
+    {
+      "title": "Rocky",
+      "cover": "img_14.jpg",
+      "id": 15
+    },
+    {
+      "title": "Rocky II",
+      "cover": "img_5.jpg",
+      "id": 16
+    },
+    {
+      "title": "Star Wars - Episode 4",
+      "subtitle": "Eine neue Hoffnung",
+      "cover": "img_15.jpg",
+      "id": 17
+    },
+    {
+      "title": "Herr der Ringe",
+      "subtitle": "Die zwei Türme",
+      "cover": "img_16.jpg",
+      "id": 18
+    },
+    {
+      "title": "Herr der Ringe III",
+      "subtitle": "Die Rückkehr des Königs",
+      "cover": "img_17.jpg",
+      "id": 19
+    },
+    {
+      "title": "Terminator 2",
+      "cover": "img_15.jpg",
+      "id": 20
+    },
+    {
+      "title": "Alien 2 - Die Rückkehr",
+      "cover": "img_17.jpg",
+      "id": 21
+    }
+  ]
+}

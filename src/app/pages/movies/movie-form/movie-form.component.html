@@ -1,0 +1,95 @@
+<div class="section movie-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h3>Formular</h3>
+            </div>
+            <!-- <div class="col-6 offset-3">
+                <div class="alert" [ngClass]="{ 'alert-success': requestResult.result == 'success', 'alert-danger' : requestResult.result == 'error'}">
+                    {{ requestResult.message }}   
+                </div>
+            </div> -->
+            
+            <div class="col-6 offset-3">
+                <form novalidate #movieForm="ngForm" (ngSubmit)="requsteTodo(movieForm.value)">
+                    <div class="form-group" *ngIf="movie.id != '0'">
+                        <label for="id">ID: </label>
+                        <input type="text" class="form-control" name="id" id="id" readonly 
+                        [(ngModel)]="id">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Titel: </label>
+                        <input type="text" class="form-control" name="title" id="title" autofocus 
+                        [(ngModel)]="movie.title" required minlength="3">
+                        <fk-show-error  path="title" text="Titel"></fk-show-error>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subline">weitere Überschrift: </label>
+                        <input type="text" class="form-control" name="subline" id="subline" 
+                        [(ngModel)]="movie.subline">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cover">Cover-Name: </label>
+                        <input type="text" class="form-control" name="cover" id="cover" 
+                        [(ngModel)]="movie.cover" required minlength="3">
+                        <fk-show-error  path="cover" text="Cover"></fk-show-error>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Beschreibung: </label>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10"
+                            [(ngModel)]="movie.description" required minlength="3" maxlength="1000"></textarea>
+                        <fk-show-error  path="description" text="Beschreibung"></fk-show-error>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="length">Länge: </label>
+                                <input type="text" class="form-control" id="length" name="length" 
+                                #length="ngModel" [(ngModel)]="movie.length" required fkNumberValidator>
+                                <fk-show-error  path="length" text="Länge"></fk-show-error>
+                            </div>
+                            <div class="col">
+                                <label for="age">FSK: </label>
+                                <select name="age" id="age" class="form-control" #length ngModel required >
+                                    <option *ngFor="let age of ages" >
+                                        {{ age }}
+                                    </option>
+                                </select>
+                                <fk-show-error  path="age" text="FSK"></fk-show-error>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="year">Erscheinungsjahr: </label>
+                                <input type="text" class="form-control" id="year" name="year" 
+                                [(ngModel)]="movie.year"  fkYearValidator required >
+                                <fk-show-error  path="year" text="Jahr"></fk-show-error>
+                            </div>
+                            <div class="col">
+                                <label>Untertitel: </label>
+                                <div class="form-check">
+                                    <input type="checkbox" name="subtitle" id="subtitle" class="form-check-input"
+                                        #subtitle ngModel>
+                                    <label for="subtitleTrue">vorhanden</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" [disabled]="!movieForm.valid">Film anlegen</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

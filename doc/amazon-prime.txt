@@ -1,0 +1,44 @@
+Movie
+
+Serie oder Film
+id, Beschreibung, Sprachen, Untertitel, Titel, cover, FSK, Länge, Genre, Jahr,
+erstelltAm, geändertAm,
+
+amazon
+shortview
+cover, neue Staffel
+shortview:hover
+Title, Sprachen, Länge, Jahr, Alter, Untertitel, Beschreibung,
+btn mehr anzeigen, Auslehen in HD, Kaufen in HD, amazonprimebtn,
+weiter optionen kauf und leioption-link
+Trailer sehen, watchlist hinzufügen
+ranking, Anzahl Ranker,
+
+details
+Titel, Sprachen, ranking, Anzahl Ranker, Länge, Jahr, Alter, Untertitel,
+Trailer, Gratistest prime, kaufen, weiter optionen, Watchlist hinzufügen,
+prise ink Mehrwertsteteuer
+Beschreibung, Genre, Regie, Hauptdarsteller,
+
+Mehr infi0
+Genre, Regie, Hauptdarsteller, Nebendarsteller, Studio, FSK, Produzenten,
+Untertitel, Sprachen, Rechte nach dem Kauf, Format, Geräte
+AndereFormate - DVD mit Preis, Blu-Ray mit Preis
+
+Kundenreferenze
+Ranking, ranking, Anzahl Ranker Durchschnitt 3,4 von 5 Sterne
+Prozentangaben pro Stern
+
+Nach Kundengruppen und Interesse  Ranging sortieren
+Maximal 3
+ranking
+
+Funktion hilfreich ja (/nein)
+
+Produkt bewerten
+Kundenrefernez erstellen
+
+Stichworte der Referenze
+Kommentare
+Avatar, Name, Ranging, Title, Erstellungsdatum,  Format, Text
+Nützlich, Kommentar, Missbrauch melden Button

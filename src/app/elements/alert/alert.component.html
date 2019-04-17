@@ -1,0 +1,14 @@
+<div class="alert-box" [ngClass]=" { 
+  'alert-container' : overlay === false, 
+  'overlay-container' : overlay === true} ">
+    <div class="alert" [ngClass]="{ 
+      'alert-success': result == 'success', 
+      'alert-danger' : result == 'error', 
+      'alert-warning overlay-box' : result == 'warning'}">
+      <p>{{ message }}</p>
+      <div *ngIf="overlay" class="overlay-nav">
+        <button class="btn btn-primary" (click)="makeDecision(false); ">Abbrechen</button>
+        <button class="btn btn-danger" (click)="makeDecision(true);">Löschen</button>
+      </div>
+    </div>
+</div>

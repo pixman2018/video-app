@@ -1,0 +1,41 @@
+<fk-main-navigation></fk-main-navigation>
+<ng-container *ngIf="showSearchBar">
+    <fk-search-form></fk-search-form>
+</ng-container>
+
+<ng-container *ngIf="showSearchBar; then searchabr; else overview">
+</ng-container>
+
+<ng-template #searchabr>
+    <router-outlet></router-outlet>
+</ng-template>
+
+<ng-template #overview>
+    <div class="overview-container">
+        <div class="container">
+            <div class="left">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="right">
+                <router-outlet name="right"></router-outlet>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<!-- <main *ngIf="!showSearchBar; else overview">
+  router-outlet></router-outlet> 
+
+    <div #overview>
+        <div class="overview-container">
+            <div class="container">
+                <div class="left">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="right">
+                    <router-outlet name="right"></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>  -->

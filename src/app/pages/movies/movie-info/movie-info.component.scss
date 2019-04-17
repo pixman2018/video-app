@@ -1,0 +1,57 @@
+$infoboxWidth: 300px;
+$infoboxImgWidth: $infoboxWidth - 10;
+
+
+.infobox {
+    position: absolute;
+    z-index: 100;
+    width: $infoboxWidth;
+    padding: 10px;
+    padding-bottom: 20px;
+    background: #fff;
+    position: absolute;
+    top: 5.4%;
+    right: -23.6%;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.5);
+
+    figure {
+        margin: 0;
+        width: 100%;
+        background: red;
+        overflow: hidden;
+        border: 5px solid #007bff;
+        
+        img {
+            max-width: $infoboxImgWidth;
+        }
+    }
+
+    .btn-close {
+        height: 2rem;
+        div {
+            position: absolute;
+            right: 10px;
+            display: flex;
+            background-color: #007bff;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: darken(#007bff, 10%);
+            }
+        }
+    }
+}
+
+.row.first{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}

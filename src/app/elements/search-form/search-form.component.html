@@ -1,0 +1,15 @@
+<section class="search-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="form-inline" #searchform="ngForm" (ngSubmit)="getSearch(searchform.value)">
+          <input class="form-control offset-6 col-5" type="search" placeholder="Search" aria-label="Search"
+            name="search" id="search"
+            #search [(ngModel)]="searchQuery"
+          >
+          <button class="btn btn-primary col-1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

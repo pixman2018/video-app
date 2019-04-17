@@ -1,0 +1,31 @@
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    fk-movie-item {
+        flex: 0 0 33.333333333328%;
+        .card {
+            margin: {
+                right: 15px;
+                bottom: 15px;
+            }
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: none;
+            }
+            figure {
+                margin-bottom: 0;
+                img {
+                    border: 5px solid #343a400a;
+                    border-bottom-width: 15px;
+                }
+                figcaption {
+                    line-height: 2em;
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+
+}
+

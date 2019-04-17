@@ -1,0 +1,44 @@
+/* ****************** */
+1. Install
+*
+*
+* install brew *
+brew install yarn
+oder per MacPort (X-Code)
+sudo port install yarn
+*
+*
+* install firebase2
+yard add angularfire2 firebase;
+npm install firebase angularfire2 --save;
+*
+*
+* install firebase 
+npm install @angular/fire firebase --save;
+*
+*
+* Projekt für Auth
+Projekt erstellen
+goole Authenfikation 
+neue DB im Testmodus
+*
+* 
+* setting the databases
+authenfication: null 
+* authenfication ist der Projektname 
+Hinzugügen drücken
+admin 
+* möglich ist admin, superadmin, customers
+Hinzugügen drücken
+id: true
+*
+* Die ID ist die uid von
+ uid = this.afAuth.authState.pipe(
+    map(authState => {
+      if (!authState) {
+        return null;
+      } else {
+        return authState.uid
+      }
+    })
+  );

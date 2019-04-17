@@ -1,0 +1,30 @@
+
+
+  <div class="infobox" >
+    <div class="btn-close">
+      <div (click)="closeInfo()">x</div>
+    </div>
+    <div class="infobox-container">
+      <h3>{{ movie.title }} <span>{{ movie.subline }}</span> </h3>
+      <figure>
+        <img [src]="movie.cover">
+      </figure>
+      <div class="row first">
+          <div class="col-6">
+              age: {{ movie.age }}
+            </div>
+            <div class="col-6">
+              Jahr: {{ movie.year }}
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          Länge: {{ movie.length }}
+        </div>
+        <div class="col-6">
+          Untertitel: <span *ngIf="movie.subtitle">Ja</span> <span *ngIf="!movie.subtitle">Nein</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
