@@ -33,10 +33,10 @@
               <thead>
                 <tr>
                   <th scope="col">
-                    ID
-                  </th>
-                  <th scope="col">
                     Titel
+                  </th>
+                  <th>
+                    
                   </th>
                   <th scope="col">
                     Untertitel
@@ -60,16 +60,16 @@
                 <!-- <tr *ngFor="let movie of movies$ | async "> -->
                 <tr *ngFor="let movie of movies$  | async">
                   <td>
-                    {{ movie.id }}
-                  </td>
-                  <td>
                     {{ movie.title}}
                   </td>
                   <td>
-                    {{ movie.subtitle }}
+                      {{ movie.subline }}
+                    </td>
+                  <td>
+                    {{ movie.subtitle ? 'Ja' : 'Nein' }}
                   </td>
                   <td>
-                    <figure>
+                    <figure> 
                       <img [src]="movie.cover" alt="">
                     </figure>
                   </td>

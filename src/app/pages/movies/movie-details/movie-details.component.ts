@@ -12,13 +12,15 @@ import { MovieInterface, createInitialMovie } from 'src/app/shared/model/movie';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movie = createInitialMovie();
+  movie;
 
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
     private location: Location,
-  ) { }
+  ) { 
+    this.movie = 'assets/img/nopic.png';
+  }
 
   ngOnInit() {
     this.route.params.subscribe( res => {

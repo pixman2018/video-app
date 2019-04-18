@@ -1,3 +1,28 @@
-<p>
-  landing works!
-</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      </div>
+
+      <div class="col-12">
+        <h2>aktuelle Filme</h2>
+        <fk-movie-list [movies]="movies">
+          <ng-template let-movie>
+           <!-- <div *ngFor="let movie of movies"> -->
+              <div class="movie-minimal">
+                  <figure>
+                    <img [src]="movie?.cover" alt="">
+                  </figure>
+                  <div class="movie-preview-info">
+                    {{ movie.title}}
+                  </div>
+                </div>
+           <!-- </div> -->
+            
+          </ng-template>
+        </fk-movie-list>
+      </div>
+
+    </div>
+  </div>
+</section>

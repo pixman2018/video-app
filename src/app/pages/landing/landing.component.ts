@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/shared/service/movie.service';
 
+import { MovieInterface, createInitialMovie } from 'src/app/shared/model/movie';
 @Component({
   selector: 'fk-landing',
   templateUrl: './landing.component.html',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  movies;
+
+  constructor(
+    private movieService: MovieService
+  ) { }
 
   ngOnInit() {
+    this.movieService.getAllMovies().subscribe( res => {
+      this.movies = res;
+    });
   }
 
 }

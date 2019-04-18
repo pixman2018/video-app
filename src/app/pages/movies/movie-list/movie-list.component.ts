@@ -1,14 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
-import {filter} from 'rxjs/internal/operators';
-import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, ViewEncapsulation, ContentChild, TemplateRef, AfterViewInit, AfterContentInit, Input } from '@angular/core';
+
+import { ActivatedRoute } from '@angular/router';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 
 import { MovieService } from '../../../shared/service/movie.service';
-import { MovieInterface,  } from '../../../shared/model/movie';
 
 
 
@@ -19,9 +16,13 @@ import { MovieInterface,  } from '../../../shared/model/movie';
   styleUrls: ['./movie-list.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MovieListComponent implements OnInit {
+export class MovieListComponent implements OnInit, AfterContentInit {
 
-  movies; //: Observable<MovieInterface[]>;
+  @Input() movies: any;
+  @ContentChild(TemplateRef) previewTemplate: TemplateRef<any>; 
+
+  hasCustomTemplate: boolean;
+
 
 
   constructor(
@@ -56,19 +57,24 @@ export class MovieListComponent implements OnInit {
       }//if
     });// route
 
-  //
-  let allMovies = document.querySelectorAll('.card');
-  console.log(allMovies.length)
-  allMovies.forEach( (movie) => {
-    console.log( this.getCoords(movie) )
-  });
-
+  // get position from all movies
+  // let allMovies = document.querySelectorAll('.card');
+  // console.log(allMovies.length)
+  // allMovies.forEach( (movie) => {
+  //   console.log( this.getCoords(movie) )
+  // });
 
   }
 
+
+  ngAfterContentInit() {
+    this.hasCustomTemplate = this.previewTemplate != null;
+  }
+/* 
+* return the position from a element
+*/
   getCoords(elem) {
     let box = elem.getBoundingClientRect();
-    console.log(box)
   
     return {
       top: box.top + pageYOffset,

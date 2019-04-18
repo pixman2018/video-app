@@ -34,7 +34,7 @@ export function createInitialMovie(): MovieClass {
         title: '',
         lowercaseTitle: '',
         subline: '',
-        cover: 'assets/img/nopic.png',
+        cover: '',
         age: null,
         description: '',
         length: null,
