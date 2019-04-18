@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'; 
 
 import { MovieService } from './../../../shared/service/movie.service';
 import { MovieInterface, createInitialMovie } from 'src/app/shared/model/movie';
@@ -16,6 +17,7 @@ export class MovieDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
+    private location: Location,
   ) { }
 
   ngOnInit() {
@@ -23,10 +25,13 @@ export class MovieDetailsComponent implements OnInit {
       const id = decodeURI(res.id);
       this.movieService.getMovieById(id).valueChanges().subscribe( (res) => {
         this.movie = res[0];
-        console.log(this.movie)
+        // TODO: Error ermitteln
       });
     });
-    
+  }
+
+  backToMovie() {
+    this.location.back();
   }
 
 }

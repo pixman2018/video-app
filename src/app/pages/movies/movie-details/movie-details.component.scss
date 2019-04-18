@@ -1,3 +1,15 @@
-img {
-    max-width: 100%;
+.infobar {
+    background-color: rgba(249, 200, 136, 0.1);
+    padding: 1rem;
+    .infobar-item {
+        border: 1px solid rgb(255, 231, 201);
+        border-radius: 3px;
+        padding: 1rem;
+    }
+    figure {
+        padding: 0;
+        img {
+            max-width: 100%;
+        }
+    }    
 }

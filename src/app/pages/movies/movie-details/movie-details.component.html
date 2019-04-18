@@ -7,21 +7,28 @@
       <div class="col-6">
         <h1>{{ movie?.title }} {{ movie?.subline }}</h1>
         <p>{{ movie?.description }}</p>
+        <div class="row infobar">
+          <div class="col-6 infobar-item">
+            Alter: {{ movie?.age }}
+          </div>
+          <div class="col-6 infobar-item">
+            Länge: {{ movie?.length }}
+          </div>
+        </div>
+
+        <div class="row infobar">
+          <div class="col-6 infobar-item">
+            Jahr: {{ movie?.year }}
+          </div>
+          <div class="col-6 infobar-item">
+            Untertitel: {{ movie?.subtitle ? 'Ja' : 'Nein' }}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        Alter: {{ movie?.age }}
-      </div>
-      <div class="col-3">
-        Länge: {{ movie?.length }}
-      </div>
-      <div class="col-3">
-        Jahr: {{ movie?.year }}
-      </div>
-      <div class="col-3">
-        Untertitel: {{ movie?.subtitle }}
+      <div class="col-12">
+        <button class="btn btn-info" (click)="backToMovie()">Zurück zu den Filmen</button>
       </div>
     </div>
   </div>
 </section>
+

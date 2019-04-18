@@ -45,6 +45,7 @@ Thumbs.db
 
 # image
 /src/assets/cover/*
+/src/assets/img/*
 
 # server
 /movie-server/node_modules
