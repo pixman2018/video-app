@@ -19,6 +19,10 @@ export class LandingComponent implements OnInit {
     this.movieService.getAllMovies().subscribe( res => {
       this.movies = res;
     });
+
+    this.movieService.getMovieSortTimestamp(6).valueChanges().subscribe( res => {
+      this.movies = res;
+    });
   }
 
 }

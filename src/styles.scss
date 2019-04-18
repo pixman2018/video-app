@@ -1,4 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+* Basic
+*/
+a {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+/*
+* Layout
+*/
 section {
     margin: {
         top: 70px;
@@ -13,6 +25,3 @@ section#site-movies {
     }
 }
 
-a {
-    cursor: pointer;
-}

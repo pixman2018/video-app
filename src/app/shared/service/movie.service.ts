@@ -6,7 +6,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 
-const BASEURL = 'http://localhost:3000/api/movies/';
+const MOVIE = 'movies/';
 
 @Injectable({
   providedIn: 'root'
@@ -27,14 +27,20 @@ export class MovieService {
   }
 
   getWhereMovie( params, searchParams) {
-    return this.firestore.collection('movies', ref => {
+    return this.firestore.collection(MOVIE, ref => {
       return ref.where(params, '==', searchParams);
     });
   }
 
   getMovieById( id ) {
-    return this.firestore.collection('movies', ref => {
+    return this.firestore.collection(MOVIE, ref => {
       return ref.where('id', '==', id);
+    });
+  }
+
+  getMovieSortTimestamp( limit ) {
+    return this.firestore.collection(MOVIE, ref => {
+      return ref.orderBy('createDate', 'desc').limit(limit);
     });
   }
 

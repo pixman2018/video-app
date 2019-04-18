@@ -3,20 +3,19 @@
     <div class="row">
       <div class="col-12">
         <div *ngIf="!hasCustomTemplate">
-            <div class="col-12">
-                <h2>Movies</h2>
-              </div>
-            <div class="movie-container">
-                <fk-movie-item *ngFor="let movie of movies" [movie]="movie"></fk-movie-item>
-            </div>
+
+          <h2>Movies</h2>
+
+          <div class="movie-container">
+            <fk-movie-item *ngFor="let movie of movies" [movie]="movie"></fk-movie-item>
+          </div>
         </div>
-            <div *ngIf="hasCustomTemplate">
-              <div class="movie-container">
-                <ng-template ngFor [ngForOf]="movies" [ngForTemplate]="previewTemplate"></ng-template>
-              </div>
-            </div>
+        <div *ngIf="hasCustomTemplate">
+          <div class="movie-container">
+            <ng-template ngFor [ngForOf]="movies" [ngForTemplate]="previewTemplate"></ng-template>
+          </div>
         </div>
       </div>
+    </div>
   </div>
 </section>
-

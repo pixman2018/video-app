@@ -1,5 +1,3 @@
-import { stringify } from '@angular/core/src/render3/util';
-
 export class MovieClass {
     id:string = '0';
     title: string = '';

@@ -42,6 +42,7 @@ export class MovieFormComponent implements OnInit {
     if (this.id) {
       this.movieService.getWhereMovie('id', this.id).valueChanges().subscribe( res => {
         this.movie = res[0];
+        this.movie.cover = this.movie.cover.split('/')[2].split('.')[0];
       });
     }
 
@@ -71,7 +72,7 @@ export class MovieFormComponent implements OnInit {
   }
 
   updateMovie( movie ) {
-   console.log('Update', this.id);
+    movie.cover = COVERDIR + movie.cover + PREFIX;
     let movieCollection = this.movieService.getWhereMovie('id', this.id);
     let snapshotId = this.createSnapshotId(movieCollection);
     snapshotId.subscribe( arr => {
